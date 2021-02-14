@@ -8,4 +8,8 @@ class TodosController < ApplicationController
     todo = Todo.find(:id)
     render plain: todo.to_pleasant_string
   end
+
+  def new
+    Todo.create!(todo_text: params[:todo_text], due_date: params[:due_date], completed: false)
+  end
 end
