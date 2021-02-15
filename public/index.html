@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Management App</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="my-app.css">
+  </head>
+  <body>
+    <main>
+      <h1 class="TodoPage-title">My Todo-list</h1>
+      <section class="">
+        <input class="NewTodo header" type="text" placeholder="What's next?" name="" id="">
+        <input class="Due header" type="date" name="" id="">
+        <input class="AddTodo header"type="button" value="Add">
+      </section>
+      <article>
+        <section class="TodoSection">
+          <h2 class="TodoSection-title">Due Today</h2>
+          <section class="Todo">
+            <input type="checkbox" class="MarkTodo" name="" id=""><p class="TodoSection-todo">Submit Saas 201 project</p><p class="Overdue">Overdue</p>
+            <img class="delete" src="delete.png" alt="delete">
+          </section>
+          <section class="Todo">
+            <input type="checkbox" class="MarkTodo" name="" id=""><p class="TodoSection-todo">Call accountant</p>
+            <img class="delete" src="delete.png" alt="delete">
+          </section>
+        </section>
+
+        <section class="TodoSection">
+          <h2 class="TodoSection-title">Due Tomorrow</h2>
+          <section class="Todo">
+            <input type="checkbox" class="MarkTodo" name="" id=""><p class="TodoSection-todo">Refill groceries</p>
+            <img class="delete" src="delete.png" alt="delete">
+          </section>
+
+        </section>
+
+        <section class="TodoSection">
+
+          <h2 class="TodoSection-title">Remaining</h2>
+          <section class="Todo">
+            <input type="checkbox" class="MarkTodo" name="" id=""><p class="TodoSection-todo">Refill groceries</p><p class="DueDate">Jan 21</p><img class="delete" src="delete.png" alt="delete">
+          </section>
+
+        </section>
+        <i class="far fa-trash-alt"></i>
+      </article>
+
+
+    </main>
+  </body>
+</html>

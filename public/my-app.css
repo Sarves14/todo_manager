@@ -1,0 +1,101 @@
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 32px auto;
+}
+.TodoPage-title {
+  font-family: OpenSans-Semibold;
+  font-weight: 600;
+  font-size: 32px;
+  color: #453c52;
+  letter-spacing: 0.14px;
+}
+.NewTodo {
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+}
+.header {
+  height: 25px;
+}
+.Due {
+  color: transparent;
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+  width: 100px;
+}
+.AddTodo {
+  background: #48bb78;
+  border-radius: 4px;
+  border-radius: 4px;
+  border-color: transparent;
+  color: white;
+  width: 75px;
+}
+
+.TodoSection-title {
+  font-family: OpenSans-Semibold;
+  font-weight: 600;
+  font-size: 24px;
+  color: #453c52;
+  letter-spacing: 0.1px;
+}
+.Todo {
+  display: flex;
+  align-items: baseline;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #453c52;
+  margin: 10px 10px;
+}
+.TodoSection-todo {
+  font-family: OpenSans;
+  font-size: 20px;
+  font-weight: 100;
+  color: #453c52;
+  letter-spacing: 0.1px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.TodoSection {
+  margin: 32px;
+}
+
+.MarkTodo {
+  size: 20px;
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+  border-radius: 4px;
+}
+
+.Overdue {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: #e91d0f;
+  letter-spacing: 0.1px;
+}
+.DueDate {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: #453c52;
+  letter-spacing: 0.1px;
+}
+.Todo:hover {
+  background: #f1edf7;
+  border-radius: 4px;
+  border-radius: 4px;
+}
+.Todo:hover > .delete {
+  display: flex;
+}
+
+.delete {
+  display: none;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
