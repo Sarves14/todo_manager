@@ -9,7 +9,7 @@
         class="MarkTodo" name="" id=""/>
       <p class="TodoSection-todotext"
         style="text-decoration:<%=todo_item.completed? ? "line-through" : "none"%>">
-        <%= todo_item.todo_text%><%= todo_item.completed?%>
+        <%= todo_item.todo_text%>
       </p>
       <%if date_flag%>
         <p class="TodoSection-date"><%=todo_item.due_date.to_s(:short)%></p>
