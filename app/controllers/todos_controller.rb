@@ -1,11 +1,12 @@
 class TodosController < ApplicationController
   def index
-    if Todo.all.length > 0
-      list = Todo.all.to_a.map { |todo| todo.to_pleasant_string }
-      render plain: list.join("\n")
-    else
-      render plain: "No Todos in the database"
-    end
+    render "index"
+    # if Todo.all.length > 0
+    #   list = Todo.all.to_a.map { |todo| todo.to_pleasant_string }
+    #   render plain: list.join("\n")
+    # else
+    #   render plain: "No Todos in the database"
+    # end
   end
 
   def show

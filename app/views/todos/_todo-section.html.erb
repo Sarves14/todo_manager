@@ -1,0 +1,20 @@
+<section class="TodoSection">
+  <div style="display:flex; align-items:baseline;">
+  <p class="TodoSection-title"><%=section_title%></p>
+  <p class="TodoSection-remaining_count"><%= todos.completed?.count.to_s+" / "+todos.count.to_s%></p>
+  </div>
+    <% todos.each do |todo_item| %>
+    <section class="Todo">
+      <input type="checkbox" <%=todo_item.completed? ? "checked" : ""%>
+        class="MarkTodo" name="" id=""/>
+      <p class="TodoSection-todotext"
+        style="text-decoration:<%=todo_item.completed? ? "line-through" : "none"%>">
+        <%= todo_item.todo_text%><%= todo_item.completed?%>
+      </p>
+      <%if date_flag%>
+        <p class="TodoSection-date"><%=todo_item.due_date.to_s(:short)%></p>
+      <%end%>
+      <input type="image" class="delete" src="delete1.png" alt="delete">
+    </section>
+    <%end%>
+</section>

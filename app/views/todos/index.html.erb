@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Management App</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="my-app.css">
+  </head>
+  <body>
+    <main>
+      <h1 class="TodoPage-title">My Todo-list</h1>
+      <section>
+        <input class="NewTodo header" type="text" placeholder="What's next?" name="" id="">
+        <input class="Due header" type="date" name="" id="">
+        <input class="AddTodo header"type="button" value="Add">
+      </section>
+      <article>
+        <%= render partial:"todo-section", locals:{section_title:"Over Due", todos:Todo.overdue , date_flag: true}%>
+        <%= render partial:"todo-section", locals:{section_title:"Due Today", todos:Todo.due_today , date_flag: false}%>
+        <%= render partial:"todo-section", locals:{section_title:"Due Later", todos:Todo.due_later , date_flag: true}%>
+      </article>
+    </main>
+  </body>
+</html>
