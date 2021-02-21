@@ -17,6 +17,7 @@ class TodosController < ApplicationController
 
   def create
     Todo.create!(todo_text: params[:todo_text], due_date: params[:due_date], completed: false)
+    redirect_to todos_path
   end
 
   def update
