@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "todos/:id", to: "todos#show"
   post "todos", to: "todos#create"
   put "todos/:id", to: "todos#update"
+  delete "todos/:id", to: "todos#destroy"
   resources :users
   post "users/login", to: "users#login"
 end

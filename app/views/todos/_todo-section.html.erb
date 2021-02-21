@@ -16,7 +16,11 @@
       <%if date_flag%>
         <p class="TodoSection-date"><%=todo_item.due_date.to_s(:short)%></p>
       <%end%>
-      <input type="image" class="delete" src="delete1.png" alt="delete">
+      <span class="delete">
+      <%= form_with(url: "/todos/#{todo_item.id}", method: "delete") do%>
+      <input type="image" style="height:15px; width:15px" src="delete1.png" alt="delete">
+      <%end%>
+      </span>
     </section>
     <%end%>
 </section>

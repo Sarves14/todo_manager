@@ -97,11 +97,11 @@ main {
 
 .Todo:hover > .delete {
   display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
 }
 
 .delete {
   display: none;
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
 }
