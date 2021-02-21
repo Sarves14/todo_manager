@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "todos", to: "todos#index"
   get "todos/:id", to: "todos#show"
   post "todos", to: "todos#create"
-  patch "todos/:id", to: "todos#update"
+  put "todos/:id", to: "todos#update"
   resources :users
   post "users/login", to: "users#login"
 end

@@ -5,8 +5,10 @@
   </div>
     <% todos.each do |todo_item| %>
     <section class="Todo">
-      <input type="checkbox" <%=todo_item.completed? ? "checked" : ""%>
-        class="MarkTodo" name="" id=""/>
+      <%= form_with(url: "/todos/#{todo_item.id}", method: "put") do%>
+      <input type="checkbox" name="completed" <%=todo_item.completed? ? "checked" : ""%>
+        class="MarkTodo" id="" onclick="this.form.submit()"/>
+      <%end%>
       <p class="TodoSection-todotext"
         style="text-decoration:<%=todo_item.completed? ? "line-through" : "none"%>">
         <%= todo_item.todo_text%>
