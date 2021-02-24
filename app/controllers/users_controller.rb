@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def new
+    render "signup"
+  end
+
   def index
     if User.all.length > 0
       list = User.all.to_a.map { |user| user.to_pleasant_string }
@@ -15,8 +19,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts "new user hit"
-    User.create!(name: params[:name], email: params[:email], password: params[:password])
+    User.create!(first_name: params[:first_name],
+                 last_name: params[:last_name],
+                 email: params[:email],
+                 password: params[:password])
+    redirect_to "/"
   end
 
   def login
