@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <%if flash[:error]%>
+      <p class="Signin-error"><%=flash[:error]%></p>
+    <%end%>
     <%if @current_user%>
       <p class="Home-header">
         <span class="Home-welcome">
