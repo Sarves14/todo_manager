@@ -1,15 +1,9 @@
 class UsersController < ApplicationController
   def new
-    render "signup"
   end
 
   def index
-    if User.all.length > 0
-      list = User.all.to_a.map { |user| user.to_pleasant_string }
-      render plain: list.join("\n")
-    else
-      render plain: "No Users in the database"
-    end
+    render "signup"
   end
 
   def show

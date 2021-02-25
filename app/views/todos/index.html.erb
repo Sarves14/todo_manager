@@ -16,7 +16,7 @@
         <input class="AddTodo header"type="submit" value="Add">
       <%end%>
       <article>
-        <%= render partial:"todo-section", locals:{section_title:"Over Due", todos:Todo.overdue , date_flag: true}%>
+        <%= render partial: "todo-section", locals: {section_title: "Over Due", todos:Todo.overdue , date_flag: true}%>
         <%= render partial:"todo-section", locals:{section_title:"Due Today", todos:Todo.due_today , date_flag: false}%>
         <%= render partial:"todo-section", locals:{section_title:"Due Later", todos:Todo.due_later , date_flag: true}%>
       </article>

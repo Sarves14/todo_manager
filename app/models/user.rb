@@ -3,6 +3,6 @@ class User < ApplicationRecord
   has_secure_password
 
   def to_pleasant_string
-    "#{id} #{name} #{email}"
+    "#{id} #{first_name} #{email}"
   end
 end
