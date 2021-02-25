@@ -22,7 +22,9 @@ class TodosController < ApplicationController
 
   def update
     todo = Todo.find(params[:id])
-    todo.completed = params[:completed]
+    flag = (params[:completed] == true || "on") ? true : false
+    todo.completed = flag
+    print todo.completed
     todo.save
     redirect_to todos_path
   end
